@@ -1,9 +1,9 @@
 local M = {}
 
 local defaults = {
-    journal_directory = '~/journal/',
-    file_name_format = '%Y-%m-%d',
-    file_extension = '.md',
+    journal_directory = "~/journal/",
+    file_name_format = "%Y-%m-%d",
+    file_extension = ".md",
     horizontal_split = false,
     vertical_split = false,
 }
