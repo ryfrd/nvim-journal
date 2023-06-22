@@ -1,21 +1,23 @@
+local opts = require("journal.config").options
+
 local M = {}
 
 function M.create_dir()
-    local dir = options.journal_directory
+    local dir = opts.journal_directory
     os.execute('mkdir ' .. dir)
 end
 
 function M.make_filename()
-    local dir = options.journal_directory
-    local fmt = options.file_name_format
+    local dir = opts.journal_directory
+    local fmt = opts.file_name_format
     local name = os.date(fmt)
-    local ext = options.file_extension
+    local ext = opts.file_extension
     return dir .. name .. ext
 end
 
 function M.open_file(file_name)
-    local vsplit = options.vertical_split
-    local hsplit = options.horizontal_split
+    local vsplit = opts.vertical_split
+    local hsplit = opts.horizontal_split
     if vsplit then
         vim.api.nvim_command('vsplit ' .. file_name)
     elseif hsplit then
@@ -27,8 +29,8 @@ end
 
 
 function M.main()
-    create_dir()
-    open(make_filename())
+    M.create_dir()
+    M.open_file(M.make_filename())
 end
 
 return M
