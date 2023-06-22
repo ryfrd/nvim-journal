@@ -30,6 +30,7 @@ function M.open_file(file_name)
     vim.api.nvim_command('split ' .. file_name)
   else
     vim.api.nvim_command('edit ' .. file_name)
+    vim.api.nvim_command('ZenMode')
   end
 end
 
