@@ -34,8 +34,8 @@ end
 
 
 function main()
-  M.create_dir()
-  M.open_file(M.make_filename())
+  create_dir()
+  open_file(make_filename())
 end
 
 local M = {}
