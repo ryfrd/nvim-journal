@@ -1,1 +1,1 @@
-command! -bar JournalEntry lua require("journal").open()
+command! -bar JournalEntry lua require("journal").journal_entry()
