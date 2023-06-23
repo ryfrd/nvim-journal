@@ -1,5 +1,5 @@
 local opts = {
-  journal_directory = "~/journal/",
+  journal_directory = "~/notes/journal/",
   file_name_format = "%Y-%m-%d",
   file_extension = ".md",
   horizontal_split = false,
